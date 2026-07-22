@@ -13,11 +13,15 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    
+    /* ADD THIS LINE */
+    "jsx": "react-jsx", 
+
     "types": ["vite/client"],
     "baseUrl": ".",
     "paths": {
       "@hinampang/firebase-sdk": ["../../packages/firebase-sdk/src/index.ts"]
     }
   },
-"include": ["src", "../../packages/firebase-sdk/src"]
+  "include": ["src", "../../packages/firebase-sdk/src"]
 }

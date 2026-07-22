@@ -1,15 +1,20 @@
-import { Navbar } from "@hinampang/ui-components";
+// apps/user/src/App.tsx
+import './index.css';
 
 function App() {
+  const games = [
+    "Basketball (Men)", "Basketball (Women)", "Volleyball (Men)", 
+    "Volleyball (Women)", "Football", "Taekwondo", "Chess", "Esports"
+  ];
+
   return (
-    <div>
-      {/* This Navbar is coming from your shared package */}
-      <Navbar /> 
-      
-      <main style={{ padding: '20px' }}>
-        <h1>User Dashboard</h1>
-        <p>This content is specific to the User Portal.</p>
-      </main>
+    <div className="carousel-container">
+      {games.map((game, index) => (
+        <div key={index} className="game-card">
+          <h2>{game}</h2>
+          <p>Click for Results</p>
+        </div>
+      ))}
     </div>
   );
 }
